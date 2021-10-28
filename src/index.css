@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {height: 100%}
+
+body, #root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "break session"
+    "pomodoro pomodoro";
+  grid-template-columns: 1fr 1fr;
+  justify-content:center;
+  align-items:center;
+}
+
+#break-settings {
+  grid-area: break;
+}
+
+#session-settings {
+  grid-area: session
+}
+
+#timer {
+  grid-area: pomodoro;
+/*   background: red; */
+  border-radius: 10px;
+/*   border: 1px solid black; */
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+  cursor: pointer;
+  background: tomato;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#time-left {
+  font-size: 30px;
 }
